@@ -15,20 +15,24 @@ else
 endif
 badd +1 content/pages/about/index.mdx
 badd +5 content/pages/new/new.mdx
-badd +36 gatsby-config.js
+badd +83 gatsby-config.js
 badd +98 content/posts/fantastic-beasts-and-where-to-find-them/index.mdx
-badd +21 content/posts/lexical-analyser/index.mdx
+badd +166 content/posts/lexical-analyser/index.mdx
+badd +179 content/posts/pass1-of-a-2pass-assembler/index.mdx
+badd +1 content/posts/pass1-of-a-2pass-assembler/style.css
+badd +1 content/posts/lexical-analyser/style.css
+badd +227 ~/program/react/RaptorsBlog/content/posts/pass2-of-a-2pass-assembler/index.mdx
 argglobal
 %argdel
-edit content/posts/lexical-analyser/index.mdx
+edit ~/program/react/RaptorsBlog/content/posts/pass2-of-a-2pass-assembler/index.mdx
 argglobal
-balt content/posts/fantastic-beasts-and-where-to-find-them/index.mdx
-let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+balt content/posts/pass1-of-a-2pass-assembler/index.mdx
+let s:l = 229 - ((30 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 03|
+keepjumps 229
+normal! 021|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
