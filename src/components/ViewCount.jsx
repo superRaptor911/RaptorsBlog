@@ -3,14 +3,15 @@ import React, { useEffect, useState } from "react";
 import eye from "../media/images/eye.png";
 import countapi from "countapi-js";
 
-const ViewCount = ({ path }) => {
+const ViewCount = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    const path = window.location.pathname.replaceAll("/", "");
     countapi.visits(path).then((result) => {
       setCount(result.value);
     });
-  }, [path]);
+  }, []);
 
   return (
     <div
