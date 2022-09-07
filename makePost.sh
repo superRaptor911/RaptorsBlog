@@ -21,5 +21,8 @@ mkdir ./content/posts/$folderName || exit 1
 
 fileName=./content/posts/$folderName/index.mdx
 echo -e "---\n title: $postName\n date: $(date +%Y-%m-%d)\n tags:$tags \n---" >> $fileName
+echo -e "\nimport ViewCount from '../../../src/components/ViewCount'" >> $fileName
+echo -e "\n\n\n<ViewCount/>" >> $fileName
 echo "Written to $fileName"
+echo "Created post with ViewCount"
 
