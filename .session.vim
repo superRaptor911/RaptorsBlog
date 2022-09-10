@@ -23,19 +23,20 @@ badd +1 content/posts/pass1-of-a-2pass-assembler/style.css
 badd +1 content/posts/lexical-analyser/style.css
 badd +236 content/posts/pass2-of-a-2pass-assembler/index.mdx
 badd +11 src/components/ViewCount.jsx
-badd +16 content/posts/telegram-movie-bot/index.mdx
+badd +4 content/posts/telegram-movie-bot/index.mdx
 badd +21 makePost.sh
+badd +0 ~/program/react/RaptorsBlog/content/posts/one-pass-macro-processor/index.mdx
 argglobal
 %argdel
-edit content/posts/telegram-movie-bot/index.mdx
+edit ~/program/react/RaptorsBlog/content/posts/one-pass-macro-processor/index.mdx
 argglobal
-balt makePost.sh
-let s:l = 16 - ((15 * winheight(0) + 21) / 43)
+balt content/posts/telegram-movie-bot/index.mdx
+let s:l = 1 - ((0 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 16
-normal! 026|
+keepjumps 1
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
